@@ -1,20 +1,15 @@
 import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import AddTask from './components/AddTask'
-import DeleteTask from './components/DeleteTask'
-import EditTask from './components/EditTask'
-
+import './App.css' 
+import ToDoInput from './components/ToDoInput'
+import 
 
 
 function App() {
 
   return (
     <>
-      <AddTask />
-      <DeleteTask />
-      <EditTask />
 
 
     </>
