@@ -2,7 +2,7 @@ import ToDoItem from './ToDoItem';
 
 function ToDoList({ todos, toggleComplete, deleteToDo, editToDo }) {
   return (
-    <ul>
+    <ul className="todo-list">
       {todos.map(function (todo, index) {
         return (
           <ToDoItem

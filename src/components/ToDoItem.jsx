@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
+import SaveImage from '../assests/Save.svg' 
+import EditImage from '../assests/Edit.svg' 
+import DeleteImage from '../assests/Delete.svg' 
 
 function ToDoItem({ todo, index, toggleComplete, deleteToDo, editToDo }) {
   const [isEditing, setIsEditing] = useState(false);
   const [newText, setNewText] = useState(todo.text);
 
   useEffect(() => {
-    setNewText(todo.text); // Update the newText when the todo text changes
+    setNewText(todo.text);
   }, [todo.text]);
 
   function handleSave() {
@@ -30,15 +33,18 @@ function ToDoItem({ todo, index, toggleComplete, deleteToDo, editToDo }) {
   }
 
   return (
-    <li>
+    <li className={`todo-item ${todo.complete ? 'completed' : ''}`}>
       {isEditing ? (
         <>
           <input
             type="text"
             value={newText}
             onChange={handleChange}
+            className="edit-input"
           />
-          <button onClick={handleSave}>Save</button>
+          <button onClick={handleSave} className="save-button">
+            <img src={SaveImage} alt="" / >Save
+          </button>
         </>
       ) : (
         <>
@@ -46,21 +52,22 @@ function ToDoItem({ todo, index, toggleComplete, deleteToDo, editToDo }) {
             type="checkbox"
             checked={todo.complete}
             onChange={handleToggle}
+            className="checkbox"
           />
-          <span style={{ textDecoration: todo.complete ? 'line-through' : 'none' }}>
-            {todo.text}
-          </span>
+          <span className="todo-text">{todo.text}</span>
           <button
             onClick={handleEdit}
             disabled={todo.complete}
+            className="edit-button"
           >
-            Edit
+            <img src={EditImage} alt="" / > Edit
           </button>
           <button
             onClick={handleDelete}
             disabled={!todo.complete}
+            className="delete-button"
           >
-            Delete
+            <img src={DeleteImage} alt="" / > Delete
           </button>
         </>
       )}

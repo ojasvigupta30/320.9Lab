@@ -1,0 +1,206 @@
+/* General body styling */
+body {
+  background-color: #f8e5b0;
+  font-family: 'Pirata One', cursive;
+  color: #3e2723;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url('https://img.freepik.com/free-vector/romantic-seascape-sunset-vector-cartoon-illustration_1196-503.jpg');
+  background-size: cover;
+  background-attachment: fixed; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+}
+
+
+/* Main app container styled like a treasure map */
+.app-container {
+  background-color: #fff7e0;
+  border: 5px solid #8b4513;
+  border-radius: 15px;
+  padding: 20px; /* Adjust padding if needed */
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 20px auto; /* Center the container */
+  text-align: center;
+  overflow: hidden; /* Hide any overflow from the container */
+}
+
+Pirate-inspired title
+.app-title {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* Form styling */
+.todo-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #8b4513;
+  border-radius: 10px;
+  outline: none;
+  background-color: #ffe4b5;
+  color: #3e2723;
+  font-size: 1rem;
+  font-family: 'Pirata One', cursive;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.todo-input:focus {
+  border-color: #b22222;
+  transform: scale(1.05);
+}
+
+.add-button {
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: 'Pirata One', cursive;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the icon images within buttons */
+button img {
+  width: 30px; /* Adjust the width as needed */
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 5px; /* Add some space between the icon and the text */
+  vertical-align: middle; /* Align the image with the text */
+}
+
+.add-button:hover {
+  background-color: #8b0000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* List styling */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* Individual todo item styling */
+.todo-item {
+  background-color: #ffe4b5;
+  border: 2px dashed #8b4513;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #3e2723;
+  font-family: 'Pirata One', cursive;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.todo-item.completed .todo-text {
+  color: #8b0000;
+  text-decoration: line-through;
+}
+
+.todo-item:hover {
+  background-color: #f5deb3;
+  transform: scale(1.02);
+}
+
+/* Checkbox styling */
+.checkbox {
+  margin-right: 10px;
+  transform: scale(1.3);
+  cursor: pointer;
+  accent-color: #b22222;
+}
+
+/* Pirate text styling */
+.todo-text {
+  flex-grow: 1;
+  font-size: 1rem;
+  color: #3e2723;
+  transition: color 0.3s;
+}
+
+/* Button styling with pirate icons */
+.edit-button,
+.delete-button,
+.save-button {
+  background-color: #b22222;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Pirata One', cursive;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-button:disabled,
+.delete-button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.edit-button:hover:not(:disabled),
+.delete-button:hover:not(:disabled),
+.save-button:hover {
+  background-color: #8b0000;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Icon styling */
+.edit-button i,
+.delete-button i,
+.save-button i {
+  margin-right: 5px;
+  font-size: 1.2rem;
+}
+
+/* Styled edit input */
+.edit-input {
+  width: 70%;
+  padding: 10px;
+  border: 2px solid #8b4513;
+  border-radius: 10px;
+  outline: none;
+  background-color: #ffe4b5;
+  color: #3e2723;
+  font-size: 1rem;
+  font-family: 'Pirata One', cursive;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: border-color 0.3s, transform 0.2s;
+}
+
+.edit-input:focus {
+  border-color: #b22222;
+  transform: scale(1.05);
+}
+
+
+/* One Piece-inspired font */
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');

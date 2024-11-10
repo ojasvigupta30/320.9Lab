@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import AddImage from '../assests/Add.svg'
 
 function ToDoInput({ addToDo }) {
   const [input, setInput] = useState('');
@@ -6,8 +7,8 @@ function ToDoInput({ addToDo }) {
   function handleSubmit(event) {
     event.preventDefault();
     if (input.trim()) {
-      addToDo(input); // Use the addToDo function from props
-      setInput(''); // Clear the input field
+      addToDo(input);
+      setInput('');
     }
   }
 
@@ -16,14 +17,17 @@ function ToDoInput({ addToDo }) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="todo-form" onSubmit={handleSubmit}>
       <input
         type="text"
         value={input}
         onChange={handleChange}
-        placeholder="Add a new todo"
+        placeholder="Add a fun new task..."
+        className="todo-input"
       />
-      <button type="submit">Add</button>
+      <button type="submit" className="add-button">
+        <img src={AddImage} alt="" /> Add
+      </button>
     </form>
   );
 }
