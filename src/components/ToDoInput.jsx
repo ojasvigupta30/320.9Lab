@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function ToDoInput({ addToDo }) {
   const [input, setInput] = useState('');

@@ -1,4 +1,3 @@
-import React from 'react';
 import ToDoItem from './ToDoItem';
 
 function ToDoList({ todos, toggleComplete, deleteToDo, editToDo }) {
