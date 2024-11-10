@@ -1,15 +1,31 @@
-import { useState, useEffect } from "react";
+import React, { useState } from 'react';
 
+function ToDoInput({ addToDo }) {
+  const [input, setInput] = useState('');
 
-function AddTask(){
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (input.trim()) {
+      addToDo(input); // Use the addToDo function from props
+      setInput(''); // Clear the input field
+    }
+  }
 
-    return(
-        <div><label><h2>To Do List</h2></label>
-        <input type="text" name="addTask" />
-        <input type="submit" value="addTask" />
-        <br />
-        </div>
-    )
+  function handleChange(event) {
+    setInput(event.target.value);
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={input}
+        onChange={handleChange}
+        placeholder="Add a new todo"
+      />
+      <button type="submit">Add</button>
+    </form>
+  );
 }
 
-export default AddTask
+export default ToDoInput;
